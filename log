@@ -76,3 +76,22 @@ Thu May 14 08:28:32 PM UTC 2026:
  tests:  2|4
 ========================================
 f23448d
+Thu May 14 08:32:37 PM UTC 2026: 
+ graph.c | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘addNode’:
+graph.c:39:9: error: implicit declaration of function ‘mapsearch’; did you mean ‘map_search’? [-Wimplicit-function-declaration]
+   39 |     if (mapsearch(g->adjacencyMap, (void*) label) != NULL) return;
+      |         ^~~~~~~~~
+      |         map_search
+graph.c:39:51: error: comparison between pointer and integer [-Werror]
+   39 |     if (mapsearch(g->adjacencyMap, (void*) label) != NULL) return;
+      |                                                   ^~
+graph.c:44:19: error: implicit declaration of function ‘create_list’ [-Wimplicit-function-declaration]
+   44 |     List* lista = create_list();
+      |                   ^~~~~~~~~~~
+graph.c:44:19: error: initialization of ‘List *’ from ‘int’ makes pointer from integer without a cast [-Wint-conversion]
+cc1: all warnings being treated as errors
+eaa71a2

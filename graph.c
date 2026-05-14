@@ -36,10 +36,14 @@ void addNode(Graph* g, const char* label)
 {
     if (!g || !label) return;
 
-    //if (mapsearch(g->adjacencyMap, (void*) label) != NULL) return;
+    if (mapsearch(g->adjacencyMap, (void*) label) != NULL) return;
 
+    char* nuevo = malloc(sizeof(char));
+    nuevo = strcpy(nuevo,label);
     
-        
+    List* lista = create_list();
+
+    map_insert(g->adjacencyMap, nuevo, lista);
     
 
 }
