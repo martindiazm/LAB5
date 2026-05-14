@@ -36,7 +36,7 @@ void addNode(Graph* g, const char* label)
 {
     if (!g || !label) return;
 
-    if (mapsearch(g->adjacencyMap, (void*) labe) != NULL) return;
+    //if (mapsearch(g->adjacencyMap, (void*) label) != NULL) return;
 
     
         
