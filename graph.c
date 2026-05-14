@@ -43,6 +43,13 @@ void addEdge(Graph* g, const char* src, const char* dest, int weight) {
 List* getEdges(Graph* g, const char* label) {
     if (!g || !label) return NULL;
 
+    MapPair* pair = map_search(g->adjacencyMap, (void*) label1);
+    
+    if (pair == NULL) return NULL;
+    
+    return pair->value;
+
+    
     return NULL;
 }
 
