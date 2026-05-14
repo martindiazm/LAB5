@@ -39,7 +39,7 @@ void addNode(Graph* g, const char* label)
     if (map_search(g->adjacencyMap, (void*) label) != NULL) return;
 
     char* nuevo = malloc(sizeof(char));
-    nuevo = strcpy(nuevo,label);
+    strcpy(nuevo,label);
     
     List* lista = list_create();
 
