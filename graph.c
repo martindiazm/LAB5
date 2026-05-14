@@ -41,7 +41,7 @@ void addNode(Graph* g, const char* label)
     char* nuevo = malloc(sizeof(char));
     nuevo = strcpy(nuevo,label);
     
-    List* lista = create_list();
+    List* lista = list_create();
 
     map_insert(g->adjacencyMap, nuevo, lista);
     

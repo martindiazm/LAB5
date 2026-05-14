@@ -95,3 +95,18 @@ graph.c:44:19: error: implicit declaration of function ‘create_list’ [-Wimpl
 graph.c:44:19: error: initialization of ‘List *’ from ‘int’ makes pointer from integer without a cast [-Wint-conversion]
 cc1: all warnings being treated as errors
 eaa71a2
+Thu May 14 08:32:54 PM UTC 2026: 
+ graph.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘addNode’:
+graph.c:39:9: error: implicit declaration of function ‘mapsearch’; did you mean ‘map_search’? [-Wimplicit-function-declaration]
+   39 |     if (mapsearch(g->adjacencyMap, (void*) label) != NULL) return;
+      |         ^~~~~~~~~
+      |         map_search
+graph.c:39:51: error: comparison between pointer and integer [-Werror]
+   39 |     if (mapsearch(g->adjacencyMap, (void*) label) != NULL) return;
+      |                                                   ^~
+cc1: all warnings being treated as errors
+6ac29bb
