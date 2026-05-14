@@ -151,3 +151,27 @@ map.h:22:37: note: expected ‘void *’ but argument is of type ‘const char *
       |                               ~~~~~~^~~
 cc1: all warnings being treated as errors
 23c809b
+Thu May 14 08:40:51 PM UTC 2026: 
+ graph.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘addNode’:
+graph.c:42:20: error: passing argument 1 of ‘strcpy’ discards ‘const’ qualifier from pointer target type [-Werror=discarded-qualifiers]
+   42 |     nuevo = strcpy(label);
+      |                    ^~~~~
+In file included from /nix/store/41pf3md9zgpda9kwh6rzn5kaddf7i0lp-glibc-2.40-66-dev/include/features.h:511,
+                 from /nix/store/41pf3md9zgpda9kwh6rzn5kaddf7i0lp-glibc-2.40-66-dev/include/bits/libc-header-start.h:33,
+                 from /nix/store/41pf3md9zgpda9kwh6rzn5kaddf7i0lp-glibc-2.40-66-dev/include/stdio.h:28,
+                 from test.c:1:
+/nix/store/41pf3md9zgpda9kwh6rzn5kaddf7i0lp-glibc-2.40-66-dev/include/bits/string_fortified.h:77:16: note: expected ‘char *’ but argument is of type ‘const char *’
+   77 | __NTH (strcpy (__fortify_clang_overload_arg (char *, __restrict, __dest),
+      |                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+graph.c:42:13: error: too few arguments to function ‘strcpy’
+   42 |     nuevo = strcpy(label);
+      |             ^~~~~~
+/nix/store/41pf3md9zgpda9kwh6rzn5kaddf7i0lp-glibc-2.40-66-dev/include/bits/string_fortified.h:77:1: note: declared here
+   77 | __NTH (strcpy (__fortify_clang_overload_arg (char *, __restrict, __dest),
+      | ^~~~~
+cc1: all warnings being treated as errors
+bd148d9
