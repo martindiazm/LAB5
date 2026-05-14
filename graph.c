@@ -36,7 +36,7 @@ void addNode(Graph* g, const char* label)
 {
     if (!g || !label) return;
 
-    if (mapsearch(g->adjacencyMap, (void*) label) != NULL) return;
+    if (map_search(g->adjacencyMap, (void*) label) != NULL) return;
 
     char* nuevo = malloc(sizeof(char));
     nuevo = strcpy(nuevo,label);
