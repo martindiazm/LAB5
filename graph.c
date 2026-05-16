@@ -105,8 +105,6 @@ int getWeight(Graph* g, const char* label1, const char* label2)
         }
         aux = list_next(lista);
     }
-    
-
     // Si no existe el origen o terminamos de iterar sin encontrar el destino
     return -1; 
 }
@@ -115,7 +113,7 @@ int getWeight(Graph* g, const char* label1, const char* label2)
 List* getAdjacentLabels(Graph* g, const char* label) 
 {
     if (!g || !label) return NULL;
-
+    
 
     return NULL; 
 }
