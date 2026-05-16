@@ -318,3 +318,13 @@ Sat May 16 09:22:26 PM UTC 2026:
  tests:  7|2
 ========================================
 2c3413a
+Sat May 16 09:31:50 PM UTC 2026: 
+ graph.c | 15 ++++++++++++++-
+ 1 file changed, 14 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘addEdge’:
+graph.c:58:5: error: expected ‘,’ or ‘;’ before ‘if’
+   58 |     if (pair == NULL) return;
+      |     ^~
+59212cf
