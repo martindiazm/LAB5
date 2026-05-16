@@ -133,33 +133,5 @@ List* getAdjacentLabels(Graph* g, const char* label)
 }
 
 void destroyGraph(Graph* g) {
-    if (!g) return;
-
-    MapPair* pair = map_first(g->adjacencyMap);
-    while (pair != NULL) {
-        char* label = (char*)pair->key;
-        List* edgesList = (List*)pair->value;
-
-        // 1. Liberar cada Arista (y su string 'target')
-        Edge* e = (Edge*)list_first(edgesList);
-        while (e != NULL) {
-            free(e->target); // Liberamos la copia del string destino
-            free(e);         // Liberamos la arista
-            e = (Edge*)list_next(edgesList);
-        }
-
-        // 2. Liberar la Lista
-        list_clean(edgesList);
-        free(edgesList);
-
-        // 3. Liberar la llave del mapa (el label origen)
-        free(label);
-
-        pair = map_next(g->adjacencyMap);
-    }
-
-    // 4. Limpiar y liberar el mapa y el grafo
-    map_clean(g->adjacencyMap);
-    free(g->adjacencyMap);
-    free(g);
+    
 }
