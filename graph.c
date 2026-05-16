@@ -77,8 +77,7 @@ void addEdge(Graph* g, const char* src, const char* dest, int weight)
 
         Edge* edge = (Edge*)malloc(sizeof(Edge));
 
-        if (edge == NULL)
-            return;
+        if (edge == NULL) return;
 
         edge->target = (char*)malloc(strlen(dest) + 1);
 
@@ -92,7 +91,7 @@ void addEdge(Graph* g, const char* src, const char* dest, int weight)
         edge->weight = weight;
 
         list_pushBack(lista, edge);
-    }
+    
     
     return;
 
