@@ -379,3 +379,51 @@ graph.c:69:10: error: ‘addEdge’ defined but not used [-Werror=unused-functio
       |          ^~~~~~~
 cc1: all warnings being treated as errors
 5cde8ec
+Sat May 16 09:57:26 PM UTC 2026: 
+ graph.c | 6 ------
+ 1 file changed, 6 deletions(-)
+Compilation failed
+In file included from test.c:5:
+graph.c:51:29: error: ‘g’ undeclared here (not in a function)
+   51 | }MapPair* pair = map_search(g->adjacencyMap, (void*) src);
+      |                             ^
+graph.c:51:54: error: ‘src’ undeclared here (not in a function)
+   51 | }MapPair* pair = map_search(g->adjacencyMap, (void*) src);
+      |                                                      ^~~
+graph.c:52:1: error: expected identifier or ‘(’ before ‘if’
+   52 | if (pair == NULL) return;
+      | ^~
+graph.c:53:1: error: expected identifier or ‘(’ before ‘if’
+   53 | if (map_search(g->adjacencyMap, (void*) dest) == NULL) return;
+      | ^~
+graph.c:54:15: error: initializer element is not constant
+   54 | List* lista = pair->value;
+      |               ^~~~
+graph.c:56:14: error: initializer element is not constant
+   56 | Edge* edge = (Edge*) malloc(sizeof(Edge));
+      |              ^
+graph.c:58:5: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘->’ token
+   58 | edge->target = strdup(dest);
+      |     ^~
+graph.c:59:5: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘->’ token
+   59 | edge->weight = weight;
+      |     ^~
+graph.c:61:1: error: data definition has no type or storage class [-Werror]
+   61 | list_pushBack(lista, edge);
+      | ^~~~~~~~~~~~~
+graph.c:61:1: error: type defaults to ‘int’ in declaration of ‘list_pushBack’ [-Wimplicit-int]
+graph.c:61:1: error: parameter names (without types) in function declaration [-Wdeclaration-missing-parameter-type]
+graph.c:61:1: error: conflicting types for ‘list_pushBack’; have ‘int()’
+In file included from graph.h:4,
+                 from graph.c:6:
+list.h:20:6: note: previous declaration of ‘list_pushBack’ with type ‘void(List *, void *)’
+   20 | void list_pushBack(List *L, void *dato);
+      |      ^~~~~~~~~~~~~
+graph.c:97:5: error: expected identifier or ‘(’ before ‘return’
+   97 |     return;
+      |     ^~~~~~
+graph.c:99:1: error: expected identifier or ‘(’ before ‘}’ token
+   99 | }
+      | ^
+cc1: all warnings being treated as errors
+3bc306c

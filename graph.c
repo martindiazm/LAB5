@@ -63,13 +63,7 @@ list_pushBack(lista, edge);
 void addEdge(Graph* g, const char* src, const char* dest, int weight) 
 {
     if (!g || !src || !dest) return;
-    #include <stdlib.h>
-    #include <string.h>
-
-    void addEdge(Graph* g, const char* src, const char* dest, int weight) 
-    {
-        if (!g || !src || !dest)
-            return;
+    
 
         MapPair* pair = map_search(g->adjacencyMap, (void*)src);
 
