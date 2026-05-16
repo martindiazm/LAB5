@@ -295,3 +295,20 @@ Fri May 15 07:57:20 PM UTC 2026:
  tests:  3|3
 ========================================
 cfa66f9
+Sat May 16 09:22:11 PM UTC 2026: 
+ graph.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘createGraph’:
+graph.c:32:54: error: expected ‘;’ before ‘return’
+   32 |     grafo->adjacencyMap = map_create(is_equal_string)
+      |                                                      ^
+      |                                                      ;
+   33 |     return NULL;
+      |     ~~~~~~                                            
+graph.c:34:1: error: control reaches end of non-void function [-Werror=return-type]
+   34 | }
+      | ^
+cc1: all warnings being treated as errors
+589d04d
